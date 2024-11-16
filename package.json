@@ -1,5 +1,5 @@
 {
-    "name": "@adonai/ohif_panel_plugin",
+    "name": "@adonai/fiftyone-ohif-panel-plugin",
     "version": "1.0.0",
     "main": "src/OHIFViewerPanel.tsx",
     "license": "MIT",
@@ -24,6 +24,7 @@
         "lodash": "^4.17.21",
         "nodemon": "^2.0.19",
         "react": "^18.2.0",
+        "react-dom": "^18.3.1",
         "react-is": "^18.2.0",
         "react-markdown": "^8.0.7",
         "styled-components": "^5.3.10",
