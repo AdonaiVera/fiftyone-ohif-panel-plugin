@@ -20,7 +20,7 @@
         "@mui/material": "^5.13.0",
         "@mui/styled-engine": "^5.12.3",
         "@rollup/plugin-node-resolve": "^15.0.2",
-        "@vitejs/plugin-react": "^4.3.3",
+        "@vitejs/plugin-react": "^4.0.0",
         "lodash": "^4.17.21",
         "nodemon": "^2.0.19",
         "react": "^18.2.0",
@@ -30,10 +30,7 @@
         "vite-plugin-externals": "^0.6.2"
     },
     "devDependencies": {
-        "@types/react": "^18.3.12",
-        "@types/react-dom": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "vite": "^5.4.11"
+        "vite": "^3.2.4"
     },
     "packageManager": "yarn@3.5.1"
 }
