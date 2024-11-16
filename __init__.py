@@ -8,7 +8,7 @@
 import fiftyone.operators as foo
 import fiftyone.operators.types as types
 
-class OpenOHIFViewerPanel(foo.Operator):
+class OpenOHIFPanel(foo.Operator):
     @property
     def config(self):
         _config = foo.OperatorConfig(
@@ -33,10 +33,12 @@ class OpenOHIFViewerPanel(foo.Operator):
         ctx.trigger(
             "open_panel",
             params=dict(
-                name="OHIFViewerPanel", isActive=True, layout="horizontal"
+                name="OHIFViewerPanel", 
+                isActive=True, 
+                layout="horizontal"
             ),
         )
 
 def register(p):
-    p.register(OpenOHIFViewerPanel)
+    p.register(OpenOHIFPanel)
     
