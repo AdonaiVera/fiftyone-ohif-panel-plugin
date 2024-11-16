@@ -31,6 +31,7 @@ export default function OHIFViewerPanel() {
   };
 
   const loadViewer = () => {
+    console.log("Button clicked!");
     if (dicomPath) {
       // Append the DICOM StudyInstanceUID as a query parameter
       setViewerUrl(`${ohifUrl}?StudyInstanceUID=${encodeURIComponent(dicomPath)}`);
