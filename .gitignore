@@ -1,13 +1,16 @@
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# macOS system file
+.DS_Store
 
-# Swap the comments on the following lines if you wish to use zero-installs
-# In that case, don't forget to run `yarn config set enableGlobalCache false`!
-# Documentation here: https://yarnpkg.com/features/caching#zero-installs
+# Pre-commit configuration file
+.pre-commit-config.yaml
 
-#!.yarn/cache
-.pnp.*
+# Yarn files
+.yarn/
+.yarnrc.yml
+
+
+__pycache__
+*.cython*
+*.egg
+*.pyc
+node_modules

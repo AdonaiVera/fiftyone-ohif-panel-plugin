@@ -1,25 +1,39 @@
 {
-  "name": "fiftyone-ohif-panel-plugin",
-  "version": "1.0.0",
-  "description": "A FiftyOne plugin to integrate the OHIF Viewer",
-  "main": "src/index.tsx",
-  "scripts": {
-    "start": "webpack serve --config webpack.config.js",
-    "build": "webpack --config webpack.config.js"
-  },
-  "author": "Adonai Vera",
-  "license": "MIT",
-  "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "@fiftyone/plugins": "^0.15.1"
-  },
-  "devDependencies": {
-    "typescript": "^4.9.5",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.11.1",
-    "ts-loader": "^9.4.1"
-  },
-  "packageManager": "yarn@4.5.1+sha512.341db9396b6e289fecc30cd7ab3af65060e05ebff4b3b47547b278b9e67b08f485ecd8c79006b405446262142c7a38154445ef7f17c1d5d1de7d90bf9ce7054d"
+    "name": "@adonai/ohif_panel_plugin",
+    "version": "1.0.0",
+    "main": "src/OHIFViewerPanel.tsx",
+    "license": "MIT",
+    "fiftyone": {
+        "script": "dist/index.umd.js"
+    },
+    "scripts": {
+        "dev": "IS_DEV=true && nodemon --watch ./src --ext js,jsx,ts,tsx --exec 'yarn build'",
+        "build": "vite build",
+        "archive": "./scripts/archive.sh",
+        "bump": "python ./scripts/update_version.py bump",
+        "release": "./scripts/release.sh"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.0",
+        "@emotion/styled": "^11.11.0",
+        "@mui/icons-material": "^5.11.16",
+        "@mui/material": "^5.13.0",
+        "@mui/styled-engine": "^5.12.3",
+        "@rollup/plugin-node-resolve": "^15.0.2",
+        "@vitejs/plugin-react": "^4.0.0",
+        "lodash": "^4.17.21",
+        "nodemon": "^2.0.19",
+        "react": "^18.2.0",
+        "react-is": "^18.2.0",
+        "react-markdown": "^8.0.7",
+        "styled-components": "^5.3.10",
+        "vite-plugin-externals": "^0.6.2"
+    },
+    "devDependencies": {
+        "@types/react": "^18.3.12",
+        "@types/react-dom": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "vite": "^3.2.4"
+    },
+    "packageManager": "yarn@3.5.1"
 }
