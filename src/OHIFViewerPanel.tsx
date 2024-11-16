@@ -13,18 +13,16 @@ export const OHIFIcon = ({ size = "1rem", style = {} }) => {
     >
       <path d="M0 0h24v24H0z" fill="none" />
       <path
-        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-10 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
         fill="#007BFF"
       />
     </svg>
   );
 };
 
-const OHIFViewerPanel = () => {
+export default function OHIFViewerPanel() {
   // Default OHIF Viewer URL
-  const [ohifUrl, setOhifUrl] = useState("http://localhost:3000/viewer");
-
-  // DICOM file URL or dataset identifier
+  const [ohifUrl, setOhifUrl] = useState("https://viewer.ohif.org");
   const [dicomPath, setDicomPath] = useState("");
   const [viewerUrl, setViewerUrl] = useState(ohifUrl);
 
@@ -34,9 +32,10 @@ const OHIFViewerPanel = () => {
 
   const loadViewer = () => {
     if (dicomPath) {
+      // Append the DICOM StudyInstanceUID as a query parameter
       setViewerUrl(`${ohifUrl}?StudyInstanceUID=${encodeURIComponent(dicomPath)}`);
     } else {
-      setViewerUrl(ohifUrl); // Fallback to base URL
+      setViewerUrl(ohifUrl); // Fallback to the default viewer URL
     }
   };
 
@@ -94,7 +93,7 @@ const OHIFViewerPanel = () => {
       </div>
     </Box>
   );
-};
+}
 
 registerComponent({
   name: "OHIFViewerPanel",
