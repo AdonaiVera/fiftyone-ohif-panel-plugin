@@ -78,3 +78,9 @@ To set up the OHIF Viewer, ensure the following:
 - Add interactivity (annotations, measurements).
 - Sync annotations between OHIF and FiftyOne.
 - Algorithm to segment.
+
+## Contributor 🎁
+
+If you are interested in building on top of this, feel free to reach out :) 
+* **Adonai Vera** - [AdonaiVera](https://github.com/AdonaiVera)
+* **Daniel Gural** - [DanGural](https://github.com/danielgural)
