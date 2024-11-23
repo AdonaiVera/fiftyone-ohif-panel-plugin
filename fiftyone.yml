@@ -1,9 +1,9 @@
 name: "@adonai/fiftyone-ohif-panel-plugin"
-description: Integrate the OHIF Viewer into the FiftyOne App for DICOM visualization!
-version: 1.0.2
+description: Integrate the OHIF Viewer into the FiftyOne App for DICOM visualization
+version: 1.0.6
 fiftyone:
-  version: ">=0.21.0"
+  version: "*"
+url: "https://github.com/AdonaiVera/fiftyone-ohif-panel-plugin"
 license: Apache 2.0
-url: "https://github.com/AdonaiVera/fiftyone-ohif-panel-plugin/blob/main/README.md"
 operators:
   - open_ohif_viewer_panel
