@@ -1,37 +1,42 @@
 import { PluginComponentType, registerComponent } from "@fiftyone/plugins";
-import { Button } from "@fiftyone/components";
 import styled from "styled-components";
 
 // Styled Container
 const Container = styled.div`
-    margin: 1em;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 1em;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+`;
+
+// Styled Iframe
+const ViewerIframe = styled.iframe`
+    width: 100%;
+    height: 100%;
+    border: none;
 `;
 
 // OHIF Viewer Panel Component
 export function OHIFViewerPanel() {
-    const openOHIFViewer = () => {
-        const viewerUrl = "https://viewer.ohif.org/";
-        const viewerWindow = window.open(
-            viewerUrl,
-            "OHIFViewer",
-            "width=1200,height=800,resizable,scrollbars"
-        );
+    const handleLoad = () => {
+        console.log("OHIF Viewer loaded successfully!");
+    };
 
-        if (!viewerWindow) {
-            alert("Unable to open the OHIF Viewer. Please check your browser settings.");
-        }
+    const handleError = () => {
+        console.error("Failed to load OHIF Viewer.");
     };
 
     return (
         <Container>
-            <h3>OHIF Viewer Panel</h3>
-            <Button onClick={openOHIFViewer} style={{ width: "200px" }}>
-                Open OHIF Viewer
-            </Button>
+            <ViewerIframe
+                src="http://localhost:3000/localbasic"
+                title="OHIF Viewer"
+                onLoad={handleLoad}
+                onError={handleError}
+            />
         </Container>
     );
 }
