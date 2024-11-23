@@ -2,6 +2,7 @@
 
 This plugin allows you to visualize DICOM images using the OHIF Viewer directly within the FiftyOne App. Seamlessly integrate medical imaging workflows into FiftyOne!
 
+![ct_images-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/6b73d010-81af-4ef3-bd2d-eea3b07cc143)
 
 ---
 
