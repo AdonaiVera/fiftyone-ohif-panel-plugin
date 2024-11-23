@@ -1,28 +1,26 @@
-## OHIF Viewer Panel Plugin
-
-# Pending to add images.
-![OHIF Viewer](https://user-images.githubusercontent.com/path-to-your-image)
+# OHIF Viewer Panel Plugin 🎒
 
 This plugin allows you to visualize DICOM images using the OHIF Viewer directly within the FiftyOne App. Seamlessly integrate medical imaging workflows into FiftyOne!
+
 
 ---
 
 ## Usage
 
-The plugin integrates the OHIF Viewer into FiftyOne, enabling users to:
+With this plugin, users can:
 - View DICOM images.
-- Enhance visualization with advanced medical imaging tools.
-- Load datasets dynamically from FiftyOne into the OHIF Viewer.
+- Utilize advanced medical imaging tools for enhanced visualization.
 
 ---
 
 ## Installation
 
-```shell
-fiftyone plugins download https://github.com/AdonaiVera/fiftyone-ohif-panel-plugin
-```
+1. Download the plugin:
+   ```shell
+   fiftyone plugins download https://github.com/AdonaiVera/fiftyone-ohif-panel-plugin
+   ```
 
-Refer to the [main FiftyOne Plugins README](https://github.com/voxel51/fiftyone-plugins) for more information about managing downloaded plugins and developing plugins locally.
+2. Refer to the [main FiftyOne Plugins README](https://github.com/voxel51/fiftyone-plugins) for guidance on managing plugins and developing locally.
 
 ---
 
@@ -30,68 +28,52 @@ Refer to the [main FiftyOne Plugins README](https://github.com/voxel51/fiftyone-
 
 ### `open_ohif_viewer_panel`
 
-- Opens the OHIF Viewer panel on click.
-
-There are three ways to execute this operator:
-
-1. Press the OHIF Viewer button in the Sample Actions Menu:
-![open_option1](https://user-images.githubusercontent.com/path-to-image)
-
-2. Click on the `+` icon next to the `Samples` tab and select `OHIF Viewer` from the dropdown menu:
-![open_option2](https://user-images.githubusercontent.com/path-to-image)
-
-3. Press "`" to pull up your list of operators, and select `open_ohif_viewer_panel`:
-![open_option3](https://user-images.githubusercontent.com/path-to-image)
+The `open_ohif_viewer_panel` operator allows you to open the OHIF Viewer. You can:
+- Load a single image.
+- Load an entire folder of DICOM images.
 
 ---
 
-## Watch a Demo
-[![Video Thumbnail](https://img.youtube.com/vi/your-video-id/0.jpg)](https://www.youtube.com/watch?v=your-video-id)
+## Additional Requirements
+
+To set up the OHIF Viewer, ensure the following:
+
+- **Yarn:** Version 1.17.3+
+- **Node.js:** Version 18+
+- **Yarn Workspaces:** Enabled on your machine:
+  ```shell
+  yarn config set workspaces-experimental true
+  ```
+
+### OHIF Viewer Setup
+
+1. Clone the [OHIF Viewer Repository](https://github.com/OHIF/Viewers).
+
+2. Install dependencies:
+   ```shell
+   yarn install
+   ```
+
+3. Start the viewer:
+   ```shell
+   yarn start
+   ```
+
+   This will launch the viewer at `http://localhost:3000`, which will be used with the FiftyOne plugin.
 
 ---
 
-## Roadmap
+## Roadmap 
 
-### **Phase 1:** Basic Panel with OHIF Viewer
-- Embed OHIF Viewer as a panel in FiftyOne.
-- Load and display hardcoded DICOM images.
+### Phase 1: Basic OHIF Panel ✅ 
+- Embed the OHIF Viewer as a panel in FiftyOne.
+- Display hardcoded DICOM images.
 
-### **Phase 2:** Dataset Sync Between FiftyOne and OHIF
-- Enable dynamic dataset sharing between FiftyOne and OHIF.
+### Phase 2: Dynamic Dataset Loading  🔧
+- Create a data pipeline to share datasets between FiftyOne and OHIF.
+- Map FiftyOne datasets to OHIF-compatible formats.
 
-### **Phase 3:** Advanced Features
-- Add annotations, measurement tools, and advanced visualization features.
-- Sync annotations between FiftyOne and OHIF Viewer.
-
-### **Phase 4:** Community Contributions
-- Gather feedback and contributions to enhance the plugin's capabilities.
-
----
-
-## Development Steps
-
-### **Step 1: Environment Setup**
-- Set up local development environments for FiftyOne and OHIF Viewer.
-- Clone the FiftyOne and OHIF repositories for reference.
-
-### **Step 2: Build a Minimal OHIF Panel**
-- Use FiftyOne’s plugin API to embed a static version of the OHIF viewer.
-- Display a hardcoded DICOM image.
-
-### **Step 3: Enable Dataset Integration**
-- Create a data pipeline to share datasets between FiftyOne and OHIF Viewer.
-- Map FiftyOne dataset formats to OHIF-compatible formats.
-
-### **Step 4: Add Interactivity**
-- Sync actions between OHIF Viewer (e.g., annotations, selections) and FiftyOne.
-
-### **Step 5: Test and Optimize**
-- Test the plugin across datasets and use cases.
-- Optimize for performance and user experience.
-
-### **Step 6: Documentation**
-- Write clear setup instructions and usage guides.
-- Add FAQs and troubleshooting tips.
-
-### **Step 7: Publish the Plugin**
-- Create the GitHub repo and populate it with code, docs, and issue templates.
+### Phase 3: Advanced Features 🔧
+- Add interactivity (annotations, measurements).
+- Sync annotations between OHIF and FiftyOne.
+- Algorithm to segment.
